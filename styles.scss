@@ -1,0 +1,281 @@
+// Colors
+// Colors
+
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+// Fonts
+// Fonts
+
+@font-face {
+    font-family: "red1";
+    src: url("../font/RedHatDisplay-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "red2";
+    src: url("../font/RedHatDisplay-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "red3";
+    src: url("../font/RedHatDisplay-Black.ttf");
+    font-weight: 900;
+}
+
+// Styles
+// Styles
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: $Pale-blue;
+    
+
+    .main-card{
+        width: 100%;
+        max-width: 450px;
+        height: 700px;
+        border-radius: 20px;
+        background-image: url("../images/illustration-hero.svg");
+        background-repeat: no-repeat;
+        background-color: white;
+        box-shadow: 1px 1px 10px hsl(224, 23%, 55%);
+
+        .text-content{
+            width: 100%;
+            max-width: 385px;
+            margin: 0px auto;
+            margin-top: 265px;
+            text-align: center;
+
+            h1{
+                font-family: "red3";
+                font-size: 28px;
+                color: $Dark-blue;
+                padding-bottom: 20px;
+            }
+            p{
+                font-family: "red1";
+                font-size: 17px;
+                color: $Desaturated-blue;
+                line-height: 25px;
+            }
+        }
+
+        .plan{
+            width: 100%;
+            max-width: 360px;
+            height: 100px;
+            margin: 0px auto;
+            border-radius: 20px;
+            background-color: #f8f9fe;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+            
+            img{
+                width: 50px;
+                height: 50px;
+                margin: auto 20px auto 20px;
+            }
+
+            .text-content2{
+                margin-right: 85px;
+
+                .set-1{
+                    font-family: "red3";
+                    color: $Dark-blue;
+                    padding-bottom: 5px;
+                }
+                .set-2{
+                    font-family: "red1";
+                    color: $Desaturated-blue;
+                }
+            }
+
+            .text-content3{
+                .set-3{
+                    font-family: "red2";
+                    color: $Bright-blue;
+                    font-size: 15px;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+                .set-3:hover{
+                    text-decoration: none;
+                    color: #a39be6;
+                }
+            }
+        }
+
+        .button{
+            width: 360px;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            margin: 0px auto;
+            margin-top: 30px;
+
+            button[type="submit"]{
+                width: 350px;
+                height: 50px;
+                margin: 0px auto;
+                font-family: "red2";
+                font-size: 15px;
+                color: white;
+                background-color: $Bright-blue;
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 2px 2px 3px $Bright-blue;
+            }
+            button[type="submit"]:hover{
+                background-color: #766cf1;
+                color: #fbfbff;
+            }
+
+            button[type="reset"]{
+                width: 110px;
+                height: 20px;
+                margin: 0px auto;
+                margin-top: 0px;
+                font-family: "red2";
+                font-size: 15px;
+                color: $Desaturated-blue;
+                background-color: white;
+                margin-top: 35px;
+                cursor: pointer;
+            }
+            button[type="reset"]:hover{
+                color: $Dark-blue;
+                text-shadow: 1px 1px 2px #ccc;
+            }
+        }
+    }
+
+    .attribution {
+        font-size: 14px;
+        text-align: center;
+        position: relative;
+        top: 25px;
+        font-family: "red2";
+        a{
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
+
+@media screen and (max-width: 530px){
+    body{
+        .main-card{
+            max-width: 330px;
+            height: 570px;
+            background-size: 330px 160px;
+
+            .text-content{
+                margin-top: 190px;
+    
+                h1{
+                    font-size: 22px;
+                }
+                p{
+                    font-size: 15px;
+                    width: 260px;
+                    margin: 0px auto;
+                }
+            }
+
+            .plan{
+                max-width: 275px;
+                height: 85px;
+                border-radius: 15px;
+                
+                img{
+                    width: 45px;
+                    height: 45px;
+                    margin: auto 20px auto 20px;
+                }
+    
+                .text-content2{
+                    margin-right: 30px;
+    
+                    .set-1{
+                        width: 85px;
+                        font-size: 14px;
+                    }
+                    .set-2{
+                        font-size: 14px;
+                    }
+                }
+    
+                .text-content3{
+                    .set-3{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .button{
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                margin: 0px auto;
+                margin-top: 30px;
+    
+                button[type="submit"]{
+                    width: 275px;
+                    height: 50px;
+                    margin: 0px auto;
+                    font-family: "red2";
+                    font-size: 15px;
+                    color: white;
+                    background-color: $Bright-blue;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    box-shadow: 2px 2px 3px $Bright-blue;
+                }
+                button[type="submit"]:hover{
+                    background-color: #766cf1;
+                    color: #fbfbff;
+                }
+    
+                button[type="reset"]{
+                    width: 110px;
+                    height: 20px;
+                    margin: 0px auto;
+                    margin-top: 0px;
+                    font-family: "red2";
+                    font-size: 15px;
+                    color: $Desaturated-blue;
+                    background-color: white;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+                button[type="reset"]:hover{
+                    color: $Dark-blue;
+                    text-shadow: 1px 1px 2px #ccc;
+                }
+            }
+        }
+    }
+}
+
+
